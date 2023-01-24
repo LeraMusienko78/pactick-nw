@@ -1,3 +1,305 @@
 @import "./variables.scss";
 @import "./mixin.scss";
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#app {
+    width: 1512px;
+    background: $bg-main;
+}
+
+.choose{
+    // width: 1512px;
+    display: flex;
+    flex-direction: column;
+   
+
+    .title{
+        display: flex;
+        justify-content: center;
+        @include font ($font-size-l,$font-family-nanum,#232323);
+        margin-top: $margin-xxl;
+        text-transform: uppercase;
+    }
+
+    .groups{
+        display: flex;
+        justify-content: space-around;
+        margin: 122px;
+        margin-top: $margin-xl ;
+
+        .group{
+            display: flex;
+
+            &__icon{
+                @include size (36px,39px);
+                margin-right: 26px;
+            }
+
+            &-title{
+                @include font($font-size-s,$font-family-nanum,$txt-color-main);
+                text-transform: uppercase;
+            }
+
+            &-text{
+                width: 261px;
+                @include font($font-size-xs,$font-family-inter,$txt-color-secondary);
+                margin-top: $margin-s;
+            }
+        }
+    }
+}
+
+.banner{
+    width: 1421px;
+    margin-left: $margin-xs;
+}
+
+.catalog{
+    display: flex;
+    flex-direction: column;
+
+    &-title{
+        display: flex;
+        justify-content: center;
+        @include font($font-size-l,$font-family-nanum,$txt-color-main);
+        margin-top: $margin-xxl;
+        text-transform: uppercase;
+    }
+
+    .catalog-groups{
+        padding: $padding-xl;
+        display: grid;
+        grid-template-columns: repeat(3 ,1fr);
+    }
+
+    &-group{
+        display: flex;
+        flex-direction: column
+    }
+
+    &-img{
+        @include size (440px,440px);
+    }
+
+    &-name{
+        display: flex;
+        justify-content: center;
+        @include font ($font-size-m,$font-family-nanum,$txt-color-secondary);
+        text-transform: uppercase;
+        margin-top: $margin-l;
+    }
+}
+
+.customers{
+
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font ($font-size-l,$font-family-nanum,$txt-color-main);
+        text-transform: uppercase;
+        margin-top: $margin-xxl - 20px;
+       
+    }
+
+    .customer-wrapper-1{
+        @include size (474px,172px);
+        border:  1px solid black;
+        background: $bg-customers;
+        position: relative;
+        margin-left:272px ;
+        margin-top: 94px;
+
+        .customer{
+            display: flex;
+            padding: $padding-m;
+
+            &-img{
+                @include size(50px,50px);
+                margin-right: 14px;
+            }
+
+            .name{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                @include font ($font-size-m,$font-family-nanum,$txt-color-secondary);
+            }
+        }
+
+        .customer-text{
+            padding: 0px 28px;
+            @include font ($font-size-xs,$font-family-inter,$txt-color-secondary);
+        }
+    }
+
+    .customer-wrapper-2{
+        @include size (474px,172px);
+        border:  1px solid black;
+        background: $bg-customers;
+        position: relative;
+        margin-left: 766px;
+        margin-top: -200px;
+
+        .customer{
+            display: flex;
+            padding: $padding-m;
+
+            &-img{
+                @include size(50px,50px);
+                margin-right: 14px;
+            }
+
+            .name{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                @include font ($font-size-m,$font-family-nanum,$txt-color-secondary);
+            }
+        }
+
+        .customer-text{
+            padding: 0px 28px;
+            @include font ($font-size-xs,$font-family-inter,$txt-color-secondary);
+        }
+    }
+
+    .customer-wrapper-3{
+        @include size (474px,172px);
+        border:  1px solid black;
+        margin-left: 480px;
+
+        .customer{
+            display: flex;
+            padding: $padding-m;
+
+            &-img{
+                @include size(50px,50px);
+                margin-right: 14px;
+            }
+
+            .name{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                @include font ($font-size-m,$font-family-nanum,$txt-color-secondary);
+            }
+        }
+
+        .customer-text{
+            padding: 0px 28px;
+            @include font ($font-size-xs,$font-family-inter,$txt-color-secondary);
+        }
+    }
+
+    .button-wrapper{
+        display: flex;
+        justify-content: end;
+        margin-right: $margin-xxl;
+        margin-bottom: 50px;
+
+        .button{
+            display: flex;
+            align-items: center;
+            border: none;
+            @include size (44px,22px);
+            margin-right: 12px;
+            padding: 11,23px;
+            @include font ($font-size-s,$font-family-inter,$txt-color-secondary);
+        }
+
+        .arrow{
+            @include size(12px,20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+}
+
+.bestsellers{
+    margin-top: $margin-xxl;
+
+    .bestsellers-title{
+        display: flex;
+        justify-content: center;
+        @include font ($font-size-l,$font-family-nanum,$txt-color-main);
+        text-transform: uppercase;
+    }
+
+    .bestsellers-groups{
+        padding: $padding-xl;
+        display: grid;
+        grid-template-columns: repeat(3 ,1fr);
+       
+
+        .bestsellers-group{
+            width: 440px;
+            display: flex;
+            flex-direction: column;
+           
+            .bestsellers-img{
+                @include size (440px,440px);
+            }
+    
+            .price-wrapper{
+                margin-top: $margin-l;
+                display: flex;
+                justify-content: space-between;
+
+                .name{
+                    @include font ($font-size-m,$font-family-nanum,$txt-color-main);
+                    text-transform: uppercase;
+                }
+    
+                .block-price{
+                    display: flex;
+
+                    .price{
+                        display: flex;
+                        padding: 5px;
+                        margin-right: 10px;
+                        @include font($font-size-m,$font-family-nanum,$txt-color-main);
+                    }
+
+                    .add-wrapper{
+                        @include size (27px,27px);
+                        border: 1px solid gray;
+
+                        .add{
+                            @include size (14px,14px);
+                            display: flex;
+                            margin: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+       
+
