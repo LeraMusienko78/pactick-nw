@@ -317,3 +317,188 @@ a {
         }
     }
 }
+
+.individual-order{
+    background-image: url("../images/individual.png");
+    @include size (1512px,800px);
+    background-size: cover;
+    margin-top: $margin-xl;
+    padding: 90px 56px;
+
+    .form-wrapper{
+       
+
+        .title{
+            @include font ($font-size-l,$font-family-nanum,$txt-color-main);
+            text-transform: uppercase;
+        }
+
+
+        .input-wrapper{
+            margin-top: 30px;
+            border: none;
+            border-bottom: 1px solid  $bg-customers;
+            width: 560px;
+           
+            .input{
+                background: inherit;
+                border: none;
+                padding: 16px 0 ;
+            }
+        }
+
+        .clip-wrapper{
+            display: flex;
+            margin-top: $margin-m ;
+            align-items: center;
+            padding: 14px;
+            width: 191px;
+            height: 48px;
+            background: gray;
+
+            .img-clip{
+                @include size(14px,16px);
+            }
+
+            .text{
+                color: $bg-main;
+                margin:0 0 0 15px;
+            }
+        }
+    }
+
+    .button-wrapper{
+        margin-top: $margin-xl;
+
+        .button{
+            @include size(300px,58px);
+            background: inherit;
+            @include font($font-size-s,$font-family-inter,$txt-color-main);
+        }
+    }
+
+    .text{
+       margin-top: $margin-s; 
+       @include font ($font-size-xs,$font-family-inter,$txt-color-secondary); 
+       width: 363px;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: $padding-xl;
+
+    .about{
+        display: flex;
+        justify-content: space-between;
+
+        .logo-sv{
+            display: flex;
+            flex-direction: column;
+
+            .logo{
+                @include font($font-size-xl,$font-family-dancing,$txt-color-main);
+            }
+
+            .sv-wrapper{
+                display: flex;
+                margin-top: $margin-s;
+
+                .sv{
+                    @include size(20px,20px);
+                    margin-left: 18px;
+                }
+                .sv:first-child{
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .information-wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-left: 200px;
+
+            .title-inf{
+                @include font($font-size-m,$font-family-inter,$txt-color-main);
+                margin-bottom: 12px;
+            }
+
+            .information{
+                padding: 30px 0;
+                @include font($font-size-s,$font-family-inter,$txt-color-secondary);
+            }
+        }
+
+        .adress-wrapper{
+            display: flex;
+            flex-direction: column;
+            // margin-left: 200px;
+
+            .title-adr{
+                @include font($font-size-m,$font-family-inter,$txt-color-main);
+                margin-bottom: 12px;
+            }
+
+            .adress{
+                padding: 30px 0;
+                @include font($font-size-s,$font-family-inter,$txt-color-secondary);
+            }
+        }
+
+        .get-in-touch{
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                @include font($font-size-m,$font-family-inter,$txt-color-main);
+                margin-bottom: 12px;
+                
+            }
+
+            .text{
+                @include font($font-size-s,$font-family-inter,$txt-color-secondary);
+                padding: 30px 0;
+                width: 320px;
+            }
+
+            .input-wrapper{
+                margin-top: 34px;
+                display: flex;
+                justify-content: space-between;
+                border: none;
+                border-bottom: 1px solid $bg-customers;
+                padding: 14px 0;
+               
+                .input{
+                    border: none;
+                    background: inherit;
+                }
+
+                .img-arrow{
+                    @include size(12px, 20px);
+                }
+                ::placeholder{
+                    @include font ($font-size-xs,$font-family-nanum,$txt-color-secondary);
+                }
+            }
+        }
+    }
+
+    .nav{
+        display: flex;
+        margin-top: $margin-xl;
+
+        &-link{
+            padding:0 10px ;
+            @include font($font-size-s,$font-family-inter,$txt-color-main);
+        }
+    }
+
+    .footer-text{
+        margin-top: 30px;
+        padding:0 10px ;
+        @include font($font-size-xs,$font-family-inter,$txt-color-secondary);
+    }
+}
