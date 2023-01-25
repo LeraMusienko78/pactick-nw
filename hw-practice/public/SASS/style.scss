@@ -295,20 +295,25 @@ a {
             }
         }
     }
-}
+    
+    .dot{
+        display: flex;
+        justify-content: center;
+       
+        .img-dot{
+            padding: 13px;
+        }
+    }
 
-.dot{
-    display: flex;
-    justify-content: center;
-   
-    .img-dot{
-        padding: 13px;
+    .button-wrapper{
+        // display: flex;
+        @include wrapper (center,center);
+        margin-top: $margin-xl;
+
+        .button{
+            @include size (200px,60px);
+            @include font ($font-size-s,$font-family-inter,$txt-color-main);
+
+        }
     }
 }
-
-
-
-
-
-       
-
